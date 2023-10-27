@@ -1,0 +1,39 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.slider{
+  background-color: v.$colorSecundario;
+  padding: 10rem 2rem;
+
+  &__heading{
+    font-size: 2rem;
+    color: v.$colorBlanco;
+    text-align: center;
+    margin-bottom: 5rem;
+    @include m.tablet {
+        font-size: 6rem;
+        text-align: left;
+        
+     }
+  }
+
+    &__grid{
+        display: block;
+        text-align: left;
+       padding: 5rem ;
+    }
+
+    &__img{
+        width: 5rem;
+        height: 5rem;
+    }
+    &__txt{
+        font-size: 1.7rem;
+    }
+    &__title{
+        font-size: 2rem;
+    }
+    &__puesto{
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,89 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.productos{
+
+    &__titular{
+        font-size: 2rem;
+        text-align: center;
+        @include m.tablet {
+            font-size: 5rem; 
+            
+         }
+    }
+    &__botones{
+        margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+    @include m.tablet { 
+        display: flex;
+        justify-content: center;
+    gap: 5rem;
+     }
+    }
+
+    &__boton{
+    
+        color: v.$colorParrafo;
+        font-size: 1.6rem;
+        background-color: v.$colorBlanco;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: .1rem solid v.$colorParrafo;
+        text-decoration: none;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        transition-property: border,background-color,color;
+        transition-duration: .5s;
+        &:hover{
+            border: none;
+            color: v.$colorBlanco;
+            background-color: v.$colorPrimario;
+                
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        align-items: center;
+        margin-top: 10rem;
+        @include m.tablet {
+            grid-template-columns: repeat(4,1fr); 
+            
+         }
+    }
+
+    &__imagen{
+        position: relative;
+
+    }
+    &__precio{
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 2rem;
+    }
+
+    &__informacion{
+        text-align: center;
+        padding: 5rem 1rem;
+     background-color: v.$colorClaro;
+    }
+    &__heading{
+        text-transform: uppercase;
+        font-size: 2rem;
+        transition-property: color;
+        transition-duration: .5s;
+
+        &:hover{
+            color: v.$colorPrimario;
+        }
+    }
+    &__title{
+        font-size: 1.7rem;
+        text-transform: uppercase;
+
+    }
+}

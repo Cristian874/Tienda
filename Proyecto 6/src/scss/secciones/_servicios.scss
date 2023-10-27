@@ -1,0 +1,34 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.servicios{
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        @include m.tablet {
+            grid-template-columns: repeat(4,1fr); 
+            
+         }
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 5rem;
+        height: 5rem;
+    }
+    &__heading{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__txt{
+        text-align: center;
+    }
+}

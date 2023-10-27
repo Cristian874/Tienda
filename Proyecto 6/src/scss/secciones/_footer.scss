@@ -1,0 +1,48 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer{
+    border-top: .1rem solid v.$colorPrimario;
+    padding: 10rem 0;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        align-items: center;
+        @include m.tablet { 
+            grid-template-columns: repeat(4,1fr);
+            
+         }
+    }
+
+    &__card{
+        text-align: center;
+    }
+
+    &__title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    &__link{
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        list-style: none;
+    }
+
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    &__imagenes{
+        display: flex;
+        gap: 2rem;
+    }
+    &__img{
+        width: 4rem;
+        height: 4rem;
+      
+    }
+}

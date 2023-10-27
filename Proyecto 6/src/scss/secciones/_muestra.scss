@@ -1,0 +1,67 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.muestra{
+
+    &__grid{
+        @include m.tablet {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 3rem;
+            align-items: center; 
+            
+         }
+
+
+    }
+
+    &__imagen{
+        display: flex;
+        gap: 2rem;
+    }
+    &__img--uno{
+        margin-top: 5rem;
+    }
+
+    &__img--dos{
+        margin-bottom: 2rem;
+    }
+    &__iconos{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    &__informacion{
+        margin-top: 5rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+    &__icono{
+        padding: 1rem;
+
+        background-color: v.$colorBlanco;
+        box-shadow: 0px 0px 5px 5px rgb(0 0 0 /.2);
+        border-radius: 50%;
+    }
+    &__icon{
+   width: 4rem;
+   height: 4rem;
+
+    }
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+        @include m.tablet {
+            font-size: 6rem; 
+            text-align: left;
+         }
+    }
+
+    &__title{
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,56 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.subcripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__img{
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+    }
+    &__heading{
+        font-size:2rem;
+        text-align: center;
+        @include m.tablet {
+            font-size: 6rem; 
+            width: 70%;
+            margin: 0 auto;
+            
+         }
+    }
+    &__formulario{
+        width: 100%;
+        margin-top: 5rem;
+        @include m.tablet { 
+            display: flex;
+            justify-content: center;
+         }
+    }
+    &__input{
+        width:90%;
+        padding:1.5rem;
+        font-size: 1.5rem;
+        border: none;
+        background-color: v.$colorCard;
+        outline: none;
+        @include m.tablet {
+            width: 40%; 
+        
+            
+         }
+        
+    }
+
+    &__boton{
+        margin-top:2rem;
+        @include m.tablet {
+            margin-top: 0; 
+            
+         }
+    }
+}

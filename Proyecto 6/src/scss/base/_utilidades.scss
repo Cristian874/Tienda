@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+ .separacion{
+    margin-top: 10rem;
+}
+
+.boton{
+    background-color: v.$colorPrimario;
+    color: v.$colorNegro;
+    text-decoration: none;
+    padding: 2rem ;
+    display: block;
+    
+   
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition-property: background-color,color;
+    transition-duration: .9s;
+    width:80%;
+    border: none;
+
+    &:hover{
+        background-color: v.$colorSecundario;
+        color: v.$colorBlanco;
+        cursor: pointer;
+    }
+    @include m.tablet{
+        display: inline;
+        width: auto; 
+        
+     }
+}
+
+.abajo{
+    background-color: v.$colorBlanco;
+    box-shadow: 5px 5px 5px 5px rgb(0 0  0 /.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 2rem 0;
+}
